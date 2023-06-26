@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<div th:each="position : ${position}">
+    <a th:href="@{/positions/{id}(id=${position.getId()})}"
+       th:text="${position.getTitle() + ', ' + position.getDescription()}">Position</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/positions/create">Create new position</a>
+
+</body>
+</html>
