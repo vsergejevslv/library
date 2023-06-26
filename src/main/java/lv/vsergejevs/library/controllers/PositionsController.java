@@ -24,7 +24,7 @@ public class PositionsController {
         return "index";
     }
 
-    @GetMapping("/{id}/edit")
+    @GetMapping("/{id}/update")
     public String edit(Model model, @PathVariable("id") Long id) {
         model.addAttribute("position", positionsService.getPosition(id));
         return "edit";
@@ -58,7 +58,7 @@ public class PositionsController {
         return "redirect:/positions";
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/{id}/update")
     public String update(@ModelAttribute("position") Position position,
                          @PathVariable("id") Long id,
                          @RequestParam("_method") String method) {

@@ -8,7 +8,7 @@
 <p th:text="${position.getTitle() + ', ' + position.getDescription()}">VALUE</p>
 <p th:text="${position.getId()}">VALUE</p>
 
-<a th:href="@{/positions/{id}/edit(id=${position.getId()})}">Edit</a>
+<a th:href="@{/positions/{id}/update(id=${position.getId()})}">Edit</a>
 
 <form th:method="DELETE" th:action="@{/positions/{id}/delete (id=${position.getId()})}">
     <input type="submit" value="Delete"/>
